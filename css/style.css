@@ -1,0 +1,731 @@
+/* Start Variables */
+:root {
+   --main-color: #19c8fa;
+   --background-color: rgb(15, 116, 143, 70%);
+   --font-color-1: white;
+   --font-color-2: #777;
+   --section-padding: 70px 0;
+}
+/* End Variables */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {font-family: 'Open Sans', sans-serif; margin: 0}
+
+.container {width: 90%; margin: 0px auto}
+
+@media (max-width: 992px) {
+    .container {width: 75%}
+}
+@media (max-width: 768px) {
+    .container {width: 90%}
+}
+input[type="button"] {border: none}
+
+.blue-button {
+    background-color: 
+    var(--main-color); 
+    color: white
+}
+.position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.background-bright {background-size: cover; filter: brightness(.5)}
+
+.circles span{
+    display: inline-block; 
+    margin: 0px 5px; 
+    border-radius: 50%
+}
+.circles span:nth-of-type(2) {background-color: var(--main-color)}
+
+/* Start Big heading */
+.big-heading h1 {text-align: center}
+
+.big-heading h1 {
+    font-weight: 400; 
+    font-size: 40px; 
+    position: relative
+}
+.big-heading h1::before,
+.big-heading h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0)
+}
+.big-heading h1::before {
+    width: 125px;
+    border-bottom: 2px solid black;
+    top: 170%;
+}
+.big-heading h1::after {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    top: 150%;
+}
+.big-heading p {
+    max-width: 550px;
+    margin:90px auto;
+    color:var(--font-color-2);
+    text-align: center;
+    line-height: 1.8;
+}
+/* End Big heading */
+.owl {
+    background-image: url("../images/header.jpg"); 
+    height: 100vh; 
+    position: relative}
+
+/* Start header */
+.first-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+/* Start header coantainer */
+.first-header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #a2a2a2;
+    padding: 0px 0px 28px;
+}
+.first-header .container .logo{width: 125px; height: 40px}
+
+.first-header .container .list{
+    color: var(--font-color-1); 
+    display: flex; 
+    align-items: center}
+
+.first-header .container .list .bars ul{margin: 0; padding: 0}
+
+@media (max-width: 768px) {
+    .first-header .container .list .bars ul {
+        display: none;
+        position: absolute;
+        width: 100%;
+        top: 140px;
+        left: 0;
+        background-color: rgb(10 9 9 / 60%);
+        z-index: 1;
+    }
+    .first-header .container .list .bars:hover ul {display: unset}
+}
+.first-header .container .list .bars ul li{
+    display: inline;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 20px;
+    padding-bottom: 39px;
+}
+@media (max-width: 768px) {
+    .first-header .container .list .bars ul li{
+        display: block;
+        padding: 15px;
+        margin: 0;
+    }
+}
+.first-header .container .list .bars ul li:hover:not(:first-of-type){
+    border-bottom: 1px solid var(--main-color);
+    color: var(--main-color)
+}
+.first-header .container .list .bars ul li:first-of-type {
+    border-bottom: 1px solid var(--main-color);
+    color: var(--main-color)
+}
+.first-header .container .list ul li a{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+.first-header .container .list .bars .fas.fa-bars {display: none; font-size: 22px}
+
+@media (max-width: 768px) {
+    .first-header .container .list .bars .fas.fa-bars {display: unset}
+}
+.first-header .container .list a{text-decoration: none; color: inherit}
+
+.first-header .container .list .fas.fa-search {
+    font-size: 20px;
+    padding: 5px 0px 5px 20px;
+    margin-left: 26px;
+    border-left: 1px solid var(--font-color-1);
+}
+/* End  header coantainer */
+/* Start header Arrows */
+.first-header .arrows {flex-grow: .5}
+
+.first-header .arrows .fa-angle-right,
+.first-header .arrows .fa-angle-left {
+    position: absolute;
+    color: var(--font-color-1);
+    font-size: 30px;
+    top: 50%;
+}
+@media (max-width: 768px) {
+    .first-header .arrows .fa-angle-right,
+    .first-header .arrows .fa-angle-left {display: none}
+}
+.first-header .arrows .fa-angle-right {right: 30px}
+
+.first-header .arrows .fa-angle-left {left: 30px}
+/* End  header Main */
+/* Start  header Circles */
+.first-header .circles {margin-top: 40px}
+
+.first-header .circles span {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--font-color-1);
+}
+@media (max-width:768px) {
+    .first-header .circles {position: absolute; bottom: 20px}
+}
+/* End  header Circles */
+/* End  header */
+/* Start Main */
+main {
+    width: 50%;
+    padding: 30px 60px 30px 70px;
+    line-height: 1.6;
+    color: white;
+    background-color: var(--background-color);
+    position: absolute;
+    top: 22%;
+}
+@media (max-width: 768px) {
+    main {
+        width: 100%;
+        padding: 40px 50px;
+        top: 32%
+    }
+}
+@media (max-width: 545px) {
+    main {padding: 30px; top: 25%}
+}
+main h1{font-weight: 500}
+
+main p{font-size: 14px; line-height: 2}
+/* End Main */
+/* Start Services */
+.services {padding: var(--section-padding)}
+
+.services .container .service {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+@media (max-width: 768px) {
+    .services .container .service {grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))}
+}
+.services .container .service > div {display: flex}
+
+@media (max-width: 768px) {
+    .services .container .service > div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+.services .container .service div .icon{font-size: 45px; padding: 15px 45px 0 0}
+
+@media (max-width: 768px) {
+    .services .container .service div .icon{padding: 0}
+}
+
+.services .container .service div .text h3{color: var(--main-color)}
+
+.services .container .service div .text p{
+    color: var(--font-color-2);
+    line-height: 2;
+    margin-top: 30px
+}
+.services .our-design {
+    position: relative;
+    overflow: hidden;
+    margin-top: 70px
+}
+.services .our-design-background {background-image: url(../images/our-design.jpg); height: 100vh}
+
+.services .our-deisgn-mobile, .services .our-design-text {position: absolute}
+
+.services .our-deisgn-mobile { top: 35%; left: 2%}
+
+@media (max-width: 768px) {
+    .services .our-deisgn-mobile {display: none}
+}
+.services .our-design-text {
+    width: 55%;
+    color: white;
+    padding: 50px;
+    background-color: var(--background-color);
+    top: 20%;
+    right: 0;
+}
+@media (max-width: 768px) {
+    .services .our-design-text {width: 100%}
+}
+.services .our-design-text h3 {
+    margin-bottom: 40px;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 24px;
+}
+.services .our-design-text div {display: flex}
+
+.services .our-design-text div i {margin: auto 20px auto 0px}
+/* End Services */
+/* Start Portfolio */
+.portfolio {
+    padding: var(--section-padding);
+    transition: 1s;
+    text-align: center;
+}
+.portfolio .buttons {text-align: center; margin: 60px}
+
+.portfolio .buttons input[type="button"] {padding: 10px; background-color:white}
+
+.portfolio .buttons input:first-of-type { background-color: var(--main-color)}
+
+.portfolio .images {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))}
+
+@media (max-width: 1040px) {
+    .portfolio .images {grid-template-columns: repeat(auto-fit, minmax(50%, 1fr))}
+}
+@media (max-width: 768px) {
+    .portfolio .images {grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))}
+}
+.portfolio .images > div {position: relative; overflow: hidden}
+
+.portfolio .images div img{width: 100%; transition: .3s}
+
+.portfolio .images div .text {
+    padding: 5px 20px;
+    background-color: white;
+    position: absolute;
+    visibility: hidden;
+    bottom: -104px;
+    width: 100%;
+    transition: .3s;
+}
+.portfolio .images div .text p:last-of-type {color: var(--main-color)}
+
+.portfolio .images > div:hover img {transform: scale(1.1) rotate(2deg)}
+
+.portfolio .images > div:hover .text {visibility: visible; transform: translateY(-100px)}
+
+.portfolio > input{margin-top: 30px; padding: 15px 20px}
+
+.portfolio .awesome-video {
+    height: 90%;
+    width: 100%;
+    position: relative;
+    margin-top: 100px
+}
+.portfolio .awesome-video video {
+    width: 100%;
+    filter: brightness(.5);
+    margin-top: 60px
+}
+.portfolio .awesome-video .text {
+    position: absolute;
+    width: 100%;
+    color: white;
+    padding: 50px;
+    background-color: var(--background-color);
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.portfolio .awesome-video .text h3 {
+    margin-bottom: 30px;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 23px;
+}
+.portfolio .awesome-video .text input {
+    background-color: black;
+    color: var(--font-color-1);
+    padding: 10px 20px;
+    margin-top: 15px
+}
+/* End Portfolio */
+/* Start About */
+/* START PART 2 */
+.about .about-p2 {position: relative}
+
+.about .about-p2 .p2-background {
+    background-image: url(../images/about-p2.png);
+    filter: brightness(.3);
+    height: 77vh;
+    margin: 300px 0px 60px;
+}
+@media (max-width: 992px) {
+    .about .about-p2 .p2-background {height: 120vh}
+}
+@media (max-width: 768px) {
+    .about .about-p2 .p2-background {height: 190vh}
+}
+.about .about-p2 .ipad {width: 60%; top: 0%; z-index: -1}
+
+@media (max-width: 768px) {
+    .about .about-p2 .ipad {width: 90%}
+}
+.about .about-p2 .text {
+    width: 92%;
+    color: white;
+    padding: 50px 0px 35px;
+    background-color: var(--background-color);
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+} 
+@media (max-width: 992px) {
+    .about .about-p2 .text {
+        width: 75%;
+        padding: 40px 0px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 60px;
+    } 
+}
+@media (max-width: 768px) {
+    .about .about-p2 .text {
+        width: 97%;
+        padding: 40px 0px;
+        gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))
+    } 
+}
+.about .about-p2 .text i {
+    color: var(--font-color-1);
+    background-color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 2.5;
+    font-size: 16px;
+}
+.about .about-p2 .text h1 {font-weight: 700; font-size: 50px}
+
+.about .about-p2 .text p {font-size: 14px}
+/* End PART 2 */
+/* Statr PART 3 */
+.about .about-p3 .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about .about-p3 .container p {line-height: 1.8}
+
+.about .about-p3 .container .text h3 {font-weight: 400}
+
+.about .about-p3 .container .text p {color: var(--font-color-2); margin: 30px 0px 40px}
+
+.about .about-p3 .container .test, 
+.about .about-p3 .container .skills {width: 45%; text-align: center}
+
+@media (max-width: 992px) {
+    .about .about-p3 .container .test, 
+    .about .about-p3 .container .skills {width: 100%; margin-bottom: 30px}
+}
+.about .about-p3 .test .people,
+.about .about-p3 .container .skills .skill {margin: 60px 0px 30px}
+
+.about .about-p3 .test .people1,
+.about .about-p3 .test .people2 {display: flex}
+
+@media (max-width: 768px) {
+    .about .about-p3 .test .people1,
+    .about .about-p3 .test .people2 {flex-direction: column; align-items: center}
+}
+.about .about-p3 .test .people img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 40px 50px 10px 0px;    
+}
+.about .about-p3 .test .people1 div,
+.about .about-p3 .test .people2 div {border-bottom: 1px solid #ccc; margin-bottom: 20px}
+
+.about .about-p3 .test .people1 div p,
+.about .about-p3 .test .people2 div p {text-align: left; margin-bottom: 5px}
+
+@media (max-width: 768px) {
+    .about .about-p3 .test .people1 div p,
+    .about .about-p3 .test .people2 div p {text-align: center}
+}
+.about .about-p3 .test .people1 div span,
+.about .about-p3 .test .people2 div span {
+    color: var(--font-color-2);
+    font-size: 13px;    
+    text-align: right;
+    margin-bottom: 15px;
+    display: block;
+}
+.about .about-p3 .test .circles span{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #aaa;
+}
+.about .about-p3 .skills .skill > div {margin: 40px 0px}
+
+.about .about-p3 .skills .skill h3 {
+    text-align: left;
+    font-weight: 400;
+    font-size: 15px;
+}
+.about .about-p3 .skills .skill div div {
+    height: 30px;
+    width: 100%;
+    background-color: #ccc;
+}
+.about .about-p3 .skills .skill div div span {
+    height: 100%;
+    width: 90%;
+    background-color: var(--main-color);
+    display: block;
+    text-align: left;
+    position: relative;
+}
+.about .about-p3 .skills .skill div div span::after {
+    content: "90%";
+    width: 40px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: var(--font-color-1);
+    background-color: black;
+    border-radius: 10%;
+    position: absolute;
+    right: -5%;
+    top: -40px;
+}
+.about .about-p3 .skills .skill div div span::before {
+    content: "";
+    border: 8px solid;
+    border-color: black transparent transparent transparent;
+    position: absolute;
+    right: -8px;
+    top: -45%;
+}
+.about .about-p3 .skills .skill div:nth-of-type(2) div span {width: 85%}
+
+.about .about-p3 .skills .skill div:nth-of-type(2) div span::after {content: "85%"; right: -5.5%}
+
+.about .about-p3 .skills .skill div:nth-of-type(3) div span {width: 80%}
+
+.about .about-p3 .skills .skill div:nth-of-type(3) div span::after {content: "80%"; right: -6%}
+/* End PART 3 */
+/* Start PART 4 */
+.about .about-p4 {
+    height: 50vh;
+    position: relative;
+    margin: 100px 0px
+}
+.about .about-p4 .p4-background {
+    height: 100%;
+    background-image: url("../images/about-p4.jpg");
+    filter: brightness(.3)
+}
+.about .about-p4 .text {
+    width: 95%;
+    text-align: center;
+    color: var(--font-color-1); 
+}
+@media (max-width: 992px) {
+    .about .about-p4 .text {width: 90%}
+}
+@media (max-width: 768px) {
+    .about .about-p4 .text {width: 95%}
+}
+.about .about-p4 .text q {font-size: 30px}
+/* End PART 4 */
+/* End About */
+/* Start Pricing */
+.pricing .container .price {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px
+}
+.pricing .container .price div {background-color: #fcfcfc; text-align: center}
+
+.pricing .container .price div h3 {
+    font-weight: 500;
+    border-top: 1px solid var(--main-color);
+    margin: 0;
+    padding: 40px 0px 0px;
+}
+.pricing .container .price div h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+    padding: 20px 0px 40px;
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .container .price div h1 sup {
+    font-weight: 400;
+    font-size: 25px;
+    padding: 0px 15px;
+    vertical-align: super;
+}
+.pricing .container .price div h1 sub{font-size: 20px; padding: 0px 15px}
+
+.pricing .container .price div p {
+    width: 50%;
+    margin: 0px auto;
+    padding: 20px 0px;
+    border-bottom: 1px solid var(--main-color);  
+}
+.pricing .container .price div span {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid var(--main-color);  
+}
+.pricing .container .price div input[type="button"] {
+    color: #551A8B;
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    padding: 20px;
+    margin: 30px;
+}
+.pricing .container .input-contact {text-align: center; margin: 40px 0px 60px}
+
+.pricing .container .input-contact p {font-size: 20px}
+
+.pricing .container .input-contact input[type="button"] {padding: 15px 30px}
+
+.pricing .pricing-p4 {position: relative; margin: 100px 0}
+
+.pricing .pricing-p4 .pricing-background {background-image: url(../images/pricing.jpg); height: 40vh}
+
+@media (max-width: 992px) {
+    .pricing .pricing-p4 .pricing-background {height: 50vh} 
+}
+.pricing .pricing-p4 .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--font-color-1);
+}
+@media (max-width: 992px) {
+    .pricing .pricing-p4 .container {flex-direction: column}  
+}
+.pricing .pricing-p4 .container > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--font-color-1);  
+}
+@media (max-width: 992px) {
+    .pricing .pricing-p4 .container > div {width: 70%}  
+}
+@media (max-width: 768px) {
+    .pricing .pricing-p4 .container > div {width: unset}  
+}
+.pricing .pricing-p4 .container p {
+    line-height: 1.8;
+    width: 60%;
+    margin: 30px;
+}
+@media (max-width: 992px) {
+    .pricing .pricing-p4 .container p {width: 100%; margin: 30px 0}  
+}
+.pricing .pricing-p4 .container div div {display: flex}
+
+.pricing .pricing-p4 .container div div i {font-size: 20px; padding: 0px 20px}
+
+.pricing .pricing-p4 .container div div input[type="email"] {
+    background-color: transparent;
+    border: none;
+    width: 40%;
+}
+.pricing .pricing-p4 .container div div input[type="email"]:focus-visible {outline: none}
+
+.pricing .pricing-p4 .container div div input::placeholder {color: var(--font-color-1)}
+
+.pricing .pricing-p4 .container div span {
+    background-color: var(--main-color);
+    padding: 20px 25px;
+    height: 100%
+}
+/* End Pricing */
+/* Start Contact US */
+.contact-us .container .contact {display: flex; justify-content: space-between}
+
+@media (max-width: 768px) {
+    .contact-us .container .contact {flex-direction: column-reverse; align-items: center}
+}
+.contact-us .container .contact .left {width: 70%}
+
+@media (max-width: 768px) {
+    .contact-us .container .contact .left {width: 100%}
+}
+.contact-us .container .contact .left :not([type="submit"]),
+.contact-us .container .contact .left textarea {
+    width: 100%;
+    padding: 20px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+}
+.contact-us .container .contact .left textarea {height: 200px}
+
+.contact-us .container .contact .left [type="submit"] {
+    border: none;
+    padding: 15px;
+    float: right;
+}
+.contact-us .container .contact .right {width: 30%}
+
+@media (max-width: 768px) {
+    .contact-us .container .contact .right {
+        text-align: center;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+.contact-us .container .contact .right div {margin: 0px 0px 70px 40px}
+
+@media (max-width: 768px) {
+    .contact-us .container .contact .right div {margin: 0px}
+}
+.contact-us .container .contact .right div h3 {font-weight: 400; margin-bottom: 30px}
+
+.contact-us .container .contact .right div p,
+.contact-us .container .contact .right div address {color: #777; line-height: 1.8}
+/* End Contact US */
+/* Start Footer */
+footer {
+    position: relative;
+    height: 60vh;
+    color: white;
+    margin-top: 100px 
+}
+footer .footer-background {
+    background-image: url(../images/pricing.jpg);
+    filter: brightness(.3);
+    height: 100%;
+}
+footer .container {text-align: center; padding-top: 20px}
+
+footer .container > div  {margin: 60px 0 70px}
+
+footer .container div h3 {font-size: 22px; font-weight: 400}
+
+footer .container div hr {width: 185px}
+
+footer .container div i {margin: 20px 15px 0}
+
+footer .container p span {color: var(--main-color); font-weight: 600}
+/* End Footer */
